@@ -1,0 +1,86 @@
+.fs-14 {
+  font-size: 14px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.bg-white {
+  background-color: white;
+}
+.text-gray {
+  color: #707070;
+}
+.header-container {
+  height: 78px;
+}
+.order-list-container {
+  background: #fbfbfb;
+  padding: 30px 137px;
+}
+.change-color-btn {
+  background-color: #f38b08;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  width: fit-content;
+  border-radius: 4px;
+  padding: 8px 12px 8px 12px;
+}
+.order-name {
+  color: #333333;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+.order-sum-hd {
+  background-color: white;
+  padding: 10px;
+  margin: 20px 0;
+}
+.arrow-back {
+  background-color: #eeeeee;
+  color: #0000008a;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.save-btn-dsbl {
+  background-color: #eeeeee;
+  color: #0000008a;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.css-my-text-gray-1 {
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.complete-green{
+  background: #00AE261A;
+  color: green;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.online-orange{
+  background: #F38B081A;
+  color: #F38B08;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+@media (max-width: 985px) {
+  .order-list-container {
+    padding: 10px;
+  }
+}
