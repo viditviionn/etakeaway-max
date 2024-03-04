@@ -20,6 +20,13 @@
   letter-spacing: 0em;
   text-align: left;
 }
+.order-list-header {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
 
 @media (max-width: 985px) {
     .order-list-container{

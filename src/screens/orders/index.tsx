@@ -11,7 +11,7 @@ const Orders: React.FC = () => {
     <div>
       <Header />
       <Box className="order-list-container">
-        <h2>Orders Listing</h2>
+        <h2 className="order-list-header">Orders Listing</h2>
         <Filters />
         <OrdersTable />
       </Box>
