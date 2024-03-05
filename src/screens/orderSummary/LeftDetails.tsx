@@ -38,11 +38,12 @@ const LeftDetails: React.FC = () => {
     <Grid container>
       <Box
         display={"flex"}
-        gap={"40px"}
+        gap={"10px"}
         alignItems={"start"}
         justifyContent="space-between"
         className="css-my-text-gray-1 bg-white"
         sx={{ padding: "20px", width: "100%" }}
+        flexWrap={'wrap'}
       >
         <Box display={"flex"} flexDirection={"column"} gap={"10px"}>
           <Box
@@ -101,6 +102,7 @@ const LeftDetails: React.FC = () => {
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"space-between"}
+          gap={"10px"}
         >
           <Box
             display={"flex"}
@@ -164,7 +166,9 @@ const LeftDetails: React.FC = () => {
               </Box>
             </Box>
           </Box>
+          <Box sx={{marginTop:'10px'}}>
           <MyButton icon={locationImg} lable="View location on map" />
+          </Box>
         </Box>
       </Box>
       {/* Product Details */}
@@ -174,11 +178,11 @@ const LeftDetails: React.FC = () => {
       >
         <Box
           display={"flex"}
-          gap={"40px"}
+          gap={"5px"}
           alignItems={"center"}
           justifyContent="space-between"
           className="css-my-text-gray-1"
-          sx={{}}
+          sx={{flexWrap:'wrap'}}
         >
           <Box sx={{ color: "black", fontSize: "16px", fontWeight: "600" }}>
             Product Details
@@ -200,7 +204,7 @@ const LeftDetails: React.FC = () => {
               className="css-btn-2"
             >
               <img src={shareOImg} />
-              <Box>Download</Box>
+              <Box>Share</Box>
             </Box>
           </Box>
         </Box>
@@ -212,7 +216,7 @@ const LeftDetails: React.FC = () => {
               alignItems={"center"}
               justifyContent={"space-between"}
               gap={"10px"}
-              height={"43px"}
+              marginTop={'10px'}
             >
               <Box>
                 <Box display={"flex"} gap={"15px"} alignItems={"start"}>

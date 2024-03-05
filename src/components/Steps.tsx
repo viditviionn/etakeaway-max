@@ -19,8 +19,6 @@ export default function Steps() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set<number>());
 
-
-
   const isStepSkipped = (step: number) => {
     return skipped.has(step);
   };
@@ -55,7 +53,7 @@ export default function Steps() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Stepper activeStep={activeStep}>
+      <Stepper activeStep={activeStep} sx={{ overflowX: "auto" }}>
         {steps.map((label, index) => {
           const stepProps: { completed?: boolean } = {};
           const labelProps: {
