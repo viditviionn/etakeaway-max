@@ -8,6 +8,8 @@ import Button from "@mui/material/Button";
 
 import MyButton from "../../components/Button";
 import { AddCircle, Circle, CloudDownload } from "@mui/icons-material";
+import DeliveryCardOne from "../../components/DeliveryCardOne";
+import DeliveryCardTwo from "../../components/DeliveryCardTwo";
 
 const RightDetails: React.FC = () => {
   const productDetails = {
@@ -37,102 +39,47 @@ const RightDetails: React.FC = () => {
   };
   return (
     <Grid container paddingLeft={2}>
-      <Box
-        display={"flex"}
-        gap={"40px"}
-        alignItems={"start"}
-        justifyContent="space-between"
-        className="css-my-text-gray-1 bg-white"
-        sx={{ padding: "10px", width: "100%" }}
-      >
-        <Box display={"flex"} justifyContent={"space-between"}>
-          <Box sx={{ padding: 1 }} className="bg-white deliverymandiv">
-            <Box
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-            >
-              <Box className="deliveryheading">Deliveryman</Box>
-              <Button
-                size="small"
-                variant="outlined"
-                onClick={() => {}}
-                className="lightgraybutton"
-              >
-                Assign Driver
-                <AddCircle sx={{ color: "#D9D9D9", marginLeft: "10px" }} />
-              </Button>
-            </Box>
-            <Box className="deliverymandesc">
-              Please mark the order status to prepared and then contact the
-              delivery partner
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        display={"flex"}
-        gap={"40px"}
-        alignItems={"start"}
-        justifyContent="space-between"
-        className="css-my-text-gray-1 bg-white"
-        sx={{ padding: "10px", width: "100%", marginTop:'20px' }}
-      >
-        <Box display={"flex"} justifyContent={"space-between"}>
-          <Box sx={{ padding: 1 }} className="bg-white deliverymandiv">
-            <Box
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-            >
-              <Box className="deliveryheading">Deliveryman</Box>
-              <Button
-                size="small"
-                variant="outlined"
-                onClick={() => {}}
-                className="lightgraybutton"
-              >
-                Assign Driver
-                <AddCircle sx={{ color: "#D9D9D9", marginLeft: "10px" }} />
-              </Button>
-            </Box>
-            <Box className="deliverymandesc">
-              Please mark the order status to prepared and then contact the
-              delivery partner
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        display={"flex"}
-        gap={"40px"}
-        alignItems={"start"}
-        justifyContent="space-between"
-        className="css-my-text-gray-1 bg-white"
-        sx={{ padding: "10px", width: "100%", marginTop:'20px' }}
-      >
-        <Box display={"flex"} justifyContent={"space-between"} width={'100%'}>
-          <Box sx={{ padding: 1 }} className="bg-white deliverymandiv">
-            <Box
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-            >
-              <Box className="deliveryheading">Deliveryman</Box>
-              <Button
-                size="small"
-                variant="outlined"
-                onClick={() => {}}
-                className="lightgraybutton"
-              >
-                Assign Driver
-                <AddCircle sx={{ color: "#D9D9D9", marginLeft: "10px" }} />
-              </Button>
-            </Box>
-         
-          </Box>
-        </Box>
-      </Box>
+      <DeliveryCardOne
+        title={"Deliveryman"}
+        description={
+          "Please mark the order status to prepared and then contact the delivery partner"
+        }
+        disabled={true}
+      />
+      <DeliveryCardOne
+        title={"Deliveryman"}
+        description={
+          "Please mark the order status to prepared and then contact the delivery partner"
+        }
+        disabled={false}
+      />
+      <DeliveryCardTwo
+        title={"Deliveryman"}
+        description={
+          "Please mark the order status to prepared and then contact the delivery partner"
+        }
+        disabled={false}
+        actionText={"Change"}
+        icon={"edit"}
+      />
+      <DeliveryCardTwo
+        title={"customer details"}
+        description={
+          "Please mark the order status to prepared and then contact the delivery partner"
+        }
+        disabled={false}
+        actionText={"View"}
+        icon={"view"}
+      />
+      <DeliveryCardTwo
+        title={"Store details"}
+        description={
+          "Please mark the order status to prepared and then contact the delivery partner"
+        }
+        disabled={false}
+        actionText={"View"}
+        icon={"view"}
+      />
     </Grid>
   );
 };

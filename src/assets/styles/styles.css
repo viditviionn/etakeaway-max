@@ -4,7 +4,7 @@
   height: 32px;
 }
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
-  color: #ffffff !important; 
+  color: #ffffff !important;
   border: 1px solid #eeeeee !important;
   width: 32px !important;
   height: 32px !important;
@@ -14,8 +14,40 @@
   fill: #ababab !important;
   font-size: 16px;
 }
-.lightOrange-btn{
-  color: #F38B08 !important;
-  border: 1px solid #F38B08 !important;
+.lightOrange-btn {
+  color: #f38b08 !important;
+  border: 1px solid #f38b08 !important;
   padding: 4px 8px;
+}
+.activebutton {
+  color: #f38b08 !important;
+  border: 1px solid #f38b08 !important;
+  padding: 4px 8px;
+}
+
+.nameText {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.emailText {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  margin-bottom: 10px;
+}
+.phoneText {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  margin-bottom: 10px;
+}
+.cardIconStyle {
+  width: 18px !important;
+  height: 18px !important;
+  margin-right: 10px;
+  color: #ABABAB;
 }
