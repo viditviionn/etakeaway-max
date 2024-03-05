@@ -1,3 +1,4 @@
+import { LocationOn } from "@mui/icons-material";
 import { Box, Button } from "@mui/material";
 import React from "react";
 
@@ -7,9 +8,9 @@ interface ChildProps {
 }
 const MyButton: React.FC<ChildProps> = ({ icon, lable }) => {
   return (
-    <Button className="lightOrange-btn" size="small">
+    <Button className="lightOrange-btn" size="small" sx={{width:'fit-content'}}>
       <Box display={"flex"} gap={"5px"} alignItems={"center"} >
-        <img src={icon} />
+      <LocationOn/>
         <Box>{lable}</Box>
       </Box>
     </Button>

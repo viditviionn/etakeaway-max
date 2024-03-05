@@ -1,3 +1,8 @@
+.container{
+  max-width: 1440px;
+  margin: auto;
+  font-family: 'poppins';
+}
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
   color: #f38b08 !important;
   width: 32px;
@@ -23,6 +28,21 @@
   color: #f38b08 !important;
   border: 1px solid #f38b08 !important;
   padding: 4px 8px;
+  cursor: pointer;
+  background-color: white !important;
+}
+.lightOrange-btn:hover{
+  color: white !important;
+  border: 1px solid #F38B08 !important;
+  background-color: #F38B08 !important;
+}
+.css-pa{
+  padding: 8px 40px;
+}
+.text-title-bold{
+  color: #333333;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .nameText {
@@ -50,4 +70,15 @@
   height: 18px !important;
   margin-right: 10px;
   color: #ABABAB;
+}
+@media (max-width: 985px) {
+  .css-pa {
+    padding: 8px 5px;
+  }
+  .text-title-bold{
+    font-size: 18px;
+  }
+  .order-name{
+    font-size: 16px;
+  }
 }
