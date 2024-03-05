@@ -7,6 +7,7 @@ import { Box, Grid } from "@mui/material";
 import { ArrowBack } from "@mui/icons-material";
 import Steps from "../../components/Steps";
 import LeftDetails from "./LeftDetails";
+import RightDetails from "./RightDetails";
 
 // The OrdersTable component
 const OrdersSummary: React.FC = () => {
@@ -90,7 +91,7 @@ const OrdersSummary: React.FC = () => {
             <LeftDetails/>
           </Grid>
           <Grid item xs={12} md={4}>
-            chhota
+            <RightDetails />
           </Grid>
         </Grid>
       </Box>

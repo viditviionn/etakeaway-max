@@ -9,8 +9,8 @@ import '../src/assets/styles/styles.css'
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Orders/>
-      {/* <OrderSummary /> */}
+      {/* <Orders/> */}
+      <OrderSummary />
     </ThemeProvider>
   );
 }
