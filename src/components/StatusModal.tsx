@@ -31,7 +31,11 @@ export default function StatusModal(props: any) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <Typography id="modal-modal-title" variant="h6" component="h2" align="center" sx={{
+            fontSize: "18px",
+            fontWeight: "600",
+            lineHeight: "27px",
+          }}>
             Status
           </Typography>
           <FormControl fullWidth margin="normal">
@@ -42,6 +46,11 @@ export default function StatusModal(props: any) {
               value={status}
               label="Status"
               onChange={handleStatusChange}
+              sx={{
+                height: '48px',
+                verticalAlign: 'center',
+                paddingBottom: '10px'
+              }}
             >
               <MenuItem value="new-order">New Order</MenuItem>
               <MenuItem value="in-progress">In Progress</MenuItem>
@@ -49,10 +58,28 @@ export default function StatusModal(props: any) {
             </Select>
           </FormControl>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
-            <Button onClick={handleClose} sx={{ mr: 1 }}>
+            <Button variant="outlined" onClick={handleClose} sx={{
+              mr: 1, borderRadius: '4px', // Adjust the border-radius to match your design
+              borderColor: "#D9D9D9", // Use the color that matches your screenshot
+              color: "#707070", // Use the color that matches your screenshot
+              textTransform: 'none', // Prevents uppercase transformation
+              fontSize: '14px', // Adjust font size to match your design
+              '&:hover': {
+                borderColor: "#D9D9D9", // Keeps the border color on hover
+                backgroundColor: 'rgba(255, 165, 0, 0.04)' // Light orange background on hover
+              },
+              background: "transparent",
+              height: "44px",
+              // width: 130,
+              fontWeight: "400",
+            }}>
               Cancel
             </Button>
-            <Button sx={{backgroundColor: '#F38B08'}} variant="contained" onClick={handleClose}>
+            <Button sx={{
+              backgroundColor: '#F38B08', '&:hover': {
+                backgroundColor: "#F38B08" // Light orange background on hover
+              },
+            }} variant="contained" onClick={handleClose}>
               Save
             </Button>
           </Box>

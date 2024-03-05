@@ -9,8 +9,7 @@ import {
 import { Select, MenuItem, SelectChangeEvent, Button, } from "@mui/material";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import StatusModal from "./StatusModal";
-
-
+import EditIcon from '@mui/icons-material/Edit';
 
 // The OrdersTable component
 const OrdersTable: React.FC = () => {
@@ -65,62 +64,25 @@ const OrdersTable: React.FC = () => {
       disableColumnMenu: true,
       headerAlign: "center", align: 'center',
       renderCell: (params: GridRenderCellParams) => (
-        // <Select
-        //   value={params.value}
-        //   onChange={(event) =>
-        //     params.api.setEditCellValue(
-        //       { id: params.id, field: params.field, value: event.target.value },
-        //       event
-        //     )
-        //   }
-        //   size="small"
-        //   // sx={{
-        //   //   width: "100%",
-        //   //   backgroundColor: getStatusColor(params.value),
-        //   // }}
-        //   sx={{
-        //     width: "100%",
-        //     // backgroundColor: getStatusColor(params.value), // This should be a function that returns a color based on the status
-        //     backgroundColor: "transparent",
-        //     height: "32px",
-        //     display: "flex",
-        //     alignItems: "center",
-        //     justifyContent: "space-between",
-        //     padding: "4px 8px",
-        //     borderRadius: "4px",
-        //     border: `1px solid ${getStatusColor(params.value)}`,
-        //     boxSizing: "border-box",
-        //     cursor: "pointer",
-        //     fontSize: "14px",
-        //     fontWeight: "400",
-        //     color: getStatusColor(params.value),
-        //     '::hover': {
-        //       borderColor: `1px solid ${getStatusColor(params.value)}`,
-        //       color: getStatusColor(params.value),
-        //     }
-        //   }}
-
-        // >
-        //   {statusOptions.map((option) => (
-        //     <MenuItem key={option} value={option}>
-        //       {option}
-        //     </MenuItem>
-        //   ))}
-        // </Select>
         <Button
           variant="outlined"
-          // startIcon={<EditIcon />}
+          endIcon={
+            params.value === "In Progress" ?
+          <EditIcon /> : ""}
           sx={{
             borderRadius: '4px', // Adjust the border-radius to match your design
             borderColor: getStatusColor(params.value), // Use the color that matches your screenshot
             color: getStatusColor(params.value), // Use the color that matches your screenshot
             textTransform: 'none', // Prevents uppercase transformation
             fontSize: '14px', // Adjust font size to match your design
-            padding: '6px 16px', // Adjust padding to match your design
             '&:hover': {
               borderColor: getStatusColor(params.value), // Keeps the border color on hover
               backgroundColor: 'rgba(255, 165, 0, 0.04)' // Light orange background on hover
             },
+            background: getBakgroundColor(params.value),
+            height: 30,
+            // width: 130,
+            fontWeight: "400",
           }}
           onClick={handleOpen}
         >
@@ -145,11 +107,23 @@ const OrdersTable: React.FC = () => {
   const getStatusColor = (status: string): string => {
     switch (status) {
       case "In Progress":
-        return "#FFFF99"; // Yellow
+        return "#F38B08"; // Yellow
       case "Completed":
-        return "#99FF99"; // Green
+        return "#00AE26"; // Green
       case "Pending":
-        return "#FFCC99"; // Orange
+        return "#F38B08"; // Orange
+      default:
+        return "transparent";
+    }
+  };
+  const getBakgroundColor = (status: string): string => {
+    switch (status) {
+      case "In Progress":
+        return "#F38B081A"; // Yellow
+      case "Completed":
+        return "#00AE261A"; // Green
+      case "Pending":
+        return "#F38B081A"; // Orange
       default:
         return "transparent";
     }

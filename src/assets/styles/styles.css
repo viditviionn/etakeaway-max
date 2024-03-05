@@ -4,11 +4,11 @@
   height: 32px;
 }
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
-  color: #ffffff;
-  border: 1px solid #eeeeee;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+  color: #ffffff !important; 
+  border: 1px solid #eeeeee !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
 }
 .css-jrt90d-MuiStepIcon-text {
   fill: #ababab !important;
