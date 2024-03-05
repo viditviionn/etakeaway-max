@@ -84,7 +84,7 @@ const OrdersSummary: React.FC = () => {
         <Box className="bg-white" sx={{ padding: "12px", marginBottom:'20px' }}>
           <Steps />
         </Box>
-        <Grid container className="bg-white" sx={{padding:'20px'}}>
+        <Grid container>
           {/* Creates a container Grid that holds items */}
           <Grid item xs={12} md={8} >
             <LeftDetails/>
